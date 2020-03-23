@@ -22,6 +22,13 @@ function search() {
       if (res.types.length === 2){
         type.innerHTML += "/" + res.types[1].type.name;
       }
+
+      var type = document.getElementById ("moves");
+      moves.innerHTML="";
+      for (let i = 0; i < res.moves.length; i++){
+
+        type.innerHTML += "Moves: " + res.moves[i].move.name+"<br>";
+      }
       
       
 
@@ -33,3 +40,15 @@ function search() {
         "No pokemon by that name";
     });
 }
+var input = document.getElementById("namn");
+
+
+input.addEventListener("keyup", function(event) {
+
+  if (event.keyCode === 13) {
+  
+    event.preventDefault();
+    
+    document.getElementById("search").click();
+  }
+});

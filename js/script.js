@@ -12,6 +12,13 @@ function search() {
       document.getElementById(
         "pokemon_sprite"
       ).innerHTML = `<img src="${res.sprites.front_default}"/>`;
+      if(res.sprites.front_shiny){
+        
+        document.getElementById(
+          "pokemon_shiny_sprite"
+        ).innerHTML = `<img src="${res.sprites.front_shiny}"/>`;
+      }
+
       var stats = document.getElementById("stats");
       stats.innerHTML="";
       for(let i = 0; i < res.stats.length; i++){
@@ -23,13 +30,20 @@ function search() {
         type.innerHTML += "/" + res.types[1].type.name;
       }
 
-      var type = document.getElementById ("moves");
-      moves.innerHTML="";
-      for (let i = 0; i < res.moves.length; i++){
+      var moves = document.getElementById ("moves");
+      moves.innerHTML="<tr>";
 
-        type.innerHTML += "Moves: " + res.moves[i].move.name+"<br>";
+      for (let i = 0; i < res.moves.length; i++){
+        
+
+        moves.innerHTML += "<td> " + res.moves[i].move.name+"</td>";
+        if(i%4===3){
+          moves.innerHTML+="</tr>";
+          moves.innerHTML+="<tr>";
+          
+        }
       }
-      
+      console.log(moves.innerHTML)
       
 
     })
@@ -51,4 +65,6 @@ input.addEventListener("keyup", function(event) {
     
     document.getElementById("search").click();
   }
+
+
 });

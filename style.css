@@ -1,1 +1,13 @@
 
+#moves{
+ display:grid;
+ column-gap: 20px;
+ font-size: 24px;  
+ grid-template-columns:auto auto auto auto;   
+}
+.rutor{
+border:2px solid black;
+margin: 0;
+padding: 5px;
+
+}

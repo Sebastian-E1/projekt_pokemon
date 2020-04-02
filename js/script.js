@@ -31,19 +31,17 @@ function search() {
       }
 
       var moves = document.getElementById ("moves");
-      moves.innerHTML="<tr>";
+      moves.innerHTML=" ";
 
       for (let i = 0; i < res.moves.length; i++){
         
 
-        moves.innerHTML += "<td> " + res.moves[i].move.name+"</td>";
-        if(i%4===3){
-          moves.innerHTML+="</tr>";
-          moves.innerHTML+="<tr>";
+        moves.innerHTML += "<p class='rutor'> " + res.moves[i].move.name+"</p>";
+        
           
-        }
+        
       }
-      console.log(moves.innerHTML)
+      
       
 
     })

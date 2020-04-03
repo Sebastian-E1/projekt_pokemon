@@ -11,3 +11,13 @@ margin: 0;
 padding: 5px;
 
 }
+
+.Logo{
+width: 250px;
+
+
+}
+.header{
+display:flex;
+justify-content: center;
+}

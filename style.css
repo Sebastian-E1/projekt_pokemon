@@ -1,14 +1,13 @@
 
 #moves{
  display:grid;
- column-gap: 20px;
  font-size: 24px;  
  grid-template-columns:auto auto auto auto;   
 }
 .rutor{
-border:2px solid black;
+border:1px solid grey;
 margin: 0;
-padding: 5px;
+padding: 3px;
 
 }
 
@@ -21,3 +20,25 @@ width: 250px;
 display:flex;
 justify-content: center;
 }
+body{
+    
+}
+.background{
+    background-image: url("./images/Bakgrund2.png");
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 242px;
+    z-index: -1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.stats-type{
+    font-variant-caps: all-petite-caps;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.452);
+    width: fit-content;
+}
+

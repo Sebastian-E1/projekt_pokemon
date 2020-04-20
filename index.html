@@ -9,14 +9,18 @@
     <link type="text/css" rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="background"></div>
   <div class="header"> <img class="Logo" src="./images/Pokemon logo.png" alt=""> </div>
     <input type="text" id="namn">
     <button id="search" onclick="search()">sök</button>
     <h2 id="pokemon_name"></h2>
     <div id="pokemon_sprite"></div>
     <div id= "pokemon_shiny_sprite"></div>
-    <div id="stats"></div>
-    <div id="type"></div>
+    <div class="stats-type">
+      
+      <div id="stats"></div>
+      <div id="type"></div>
+    </div>
     <div id="moves" ></div>
   </body>
   <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>

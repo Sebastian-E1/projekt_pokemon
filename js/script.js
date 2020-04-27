@@ -36,7 +36,7 @@ function search() {
       for (let i = 0; i < res.moves.length; i++){
         
 
-        moves.innerHTML += "<p class='rutor'> " + res.moves[i].move.name+"</p>";
+        moves.innerHTML += "<button onclick = 'move_info(`"+res.moves[i].move.name+"`)' class='rutor'> " + res.moves[i].move.name+"</button>";
         
           
         
@@ -53,7 +53,14 @@ function search() {
     });
 }
 var input = document.getElementById("namn");
-
+function move_info(move_name){
+  console.log(move_name);
+  P.getMoveByName(move_name)
+  .then(function(response) {
+    console.log(response);
+    document.getElementById ("move_info").innerHTML=response.name + response.power 
+  });
+}
 
 input.addEventListener("keyup", function(event) {
 

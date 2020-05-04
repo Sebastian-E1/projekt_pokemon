@@ -47,5 +47,8 @@ body{
 }
 #move_info{
     border: 3px solid black;
-    width:fit-content 
+    width:fit-content ;
+    text-transform: uppercase;
+    font-size: 18px;
+    
 }

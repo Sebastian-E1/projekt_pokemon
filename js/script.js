@@ -32,14 +32,21 @@ function search() {
 
       var moves = document.getElementById ("moves");
       moves.innerHTML=" ";
+      
 
       for (let i = 0; i < res.moves.length; i++){
         
 
-        moves.innerHTML += "<button onclick = 'move_info(`"+res.moves[i].move.name+"`)' class='rutor'> " + res.moves[i].move.name+"</button>";
         
-          
-        
+        if (window.innerWidth > 500) {
+          moves.innerHTML += "<button onclick = 'move_info(`"+res.moves[i].move.name+"`)' class='rutor'> " + res.moves[i].move.name+"</button>";
+
+         } 
+        else {
+          moves.innerHTML += "<button onclick = 'move_info(`"+res.moves[i].move.name+"`)' class='rutor-mobil'> " + res.moves[i].move.name+"</button>";
+
+        }
+
       }
       
       
@@ -62,11 +69,11 @@ function move_info(move_name){
     console.log(response);
     document.getElementById ("move_info").innerHTML=response.name + "<br>" 
     if(response.power==null){
-      document.getElementById ("move_info").innerHTML += "Effect:" + response.effect_entries[0].effect+"<br> PP:" + response.pp+"<br> Priority:"+response.priority
+      document.getElementById ("move_info").innerHTML += "Effect: " + response.effect_entries[0].effect+"<br> PP: " + response.pp+"<br> Priority: "+response.priority
     }
    else{
   
-    document.getElementById ("move_info").innerHTML += "Power:" + response.power + "<br> PP:" + response.pp + "<br> Accuracy:" + response.accuracy + "<br>Priority: " + response.priority
+    document.getElementById ("move_info").innerHTML += "Power: " + response.power + "<br> PP: " + response.pp + "<br> Accuracy: " + response.accuracy + "<br>Priority: " + response.priority
    }   
     
   });

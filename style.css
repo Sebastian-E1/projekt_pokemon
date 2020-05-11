@@ -10,6 +10,11 @@ margin: 0;
 padding: 3px;
 
 }
+.rutor-mobil{
+    border:1px solid grey;
+margin: 0;
+padding: 16px;
+}
 
 .Logo{
 width: 250px;
@@ -20,9 +25,8 @@ width: 250px;
 display:flex;
 justify-content: center;
 }
-body{
-    
-}
+
+
 .background{
     background-image: url("./images/Bakgrund2.png");
     opacity: 0.4;
